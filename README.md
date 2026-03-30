@@ -185,4 +185,344 @@ Los cables morados del display se conectaron a los pines digitales del Arduino U
 
 
 ## EXPLICACIÓN CODIGO
+```
+int A; 
+
+int B; 
+
+int C; 
+
+int D; 
+
+void setup(){ 
+
+  pinMode(13,INPUT); 
+
+  pinMode(12,INPUT); 
+
+  pinMode(11,INPUT); 
+
+  pinMode(10,INPUT); 
+
+  pinMode(8,OUTPUT); 
+
+  pinMode(7,OUTPUT); 
+
+  pinMode(6,OUTPUT); 
+
+  pinMode(5,OUTPUT); 
+
+  pinMode(4,OUTPUT); 
+
+  pinMode(3,OUTPUT); 
+
+  pinMode(2,OUTPUT); 
+
+} 
+
+  
+
+void loop(){ 
+
+  A=digitalRead(13); 
+
+  B=digitalRead(12); 
+
+  C=digitalRead(11); 
+
+  D=digitalRead(10); 
+
+   
+
+  if (A==0 & B==0 & C==0 & D==0){ 
+
+  digitalWrite(7,1); 
+
+  digitalWrite(8,1); 
+
+  digitalWrite(4,1); 
+
+  digitalWrite(3,1); 
+
+  digitalWrite(2,1); 
+
+  digitalWrite(6,1); 
+
+  digitalWrite(5,0); 
+
+  } 
+
+  else if (A==0 & B==0 & C==0 & D==1){ 
+
+  digitalWrite(7,0); 
+
+  digitalWrite(8,1); 
+
+  digitalWrite(4,1); 
+
+  digitalWrite(3,0); 
+
+  digitalWrite(2,0); 
+
+  digitalWrite(6,0); 
+
+  digitalWrite(5,0); 
+
+  } 
+
+  else if (A==0 & B==0 & C==1 & D==0){ 
+
+  digitalWrite(7,1); 
+
+  digitalWrite(8,1); 
+
+  digitalWrite(4,0); 
+
+  digitalWrite(3,1); 
+
+  digitalWrite(2,1); 
+
+  digitalWrite(6,0); 
+
+  digitalWrite(5,1); 
+
+  } 
+
+  else if (A==0 & B==0 & C==1 & D==1){ 
+
+  digitalWrite(7,1); 
+
+  digitalWrite(8,1); 
+
+  digitalWrite(4,1); 
+
+  digitalWrite(3,1); 
+
+  digitalWrite(2,0); 
+
+  digitalWrite(6,0); 
+
+  digitalWrite(5,1); 
+
+  } 
+
+  else if (A==0 & B==1 & C==0 & D==0){ 
+
+  digitalWrite(7,0); 
+
+  digitalWrite(8,1); 
+
+  digitalWrite(4,1); 
+
+  digitalWrite(3,0); 
+
+  digitalWrite(2,0); 
+
+  digitalWrite(6,1); 
+
+  digitalWrite(5,1); 
+
+  } 
+
+  else if (A==0 & B==1 & C==0 & D==1){ 
+
+  digitalWrite(7,1); 
+
+  digitalWrite(8,0); 
+
+  digitalWrite(4,1); 
+
+  digitalWrite(3,1); 
+
+  digitalWrite(2,0); 
+
+  digitalWrite(6,1); 
+
+  digitalWrite(5,1); 
+
+  } 
+
+  else if (A==0 & B==1 & C==1 & D==0){ 
+
+  digitalWrite(7,1); 
+
+  digitalWrite(8,0); 
+
+  digitalWrite(4,1); 
+
+  digitalWrite(3,1); 
+
+  digitalWrite(2,1); 
+
+  digitalWrite(6,1); 
+
+  digitalWrite(5,1); 
+
+  } 
+
+  else if (A==0 & B==1 & C==1 & D==1){ 
+
+  digitalWrite(7,1); 
+
+  digitalWrite(8,1); 
+
+  digitalWrite(4,1); 
+
+  digitalWrite(3,0); 
+
+  digitalWrite(2,0); 
+
+  digitalWrite(6,0); 
+
+  digitalWrite(5,0); 
+
+  } 
+
+  else if (A==1 & B==0 & C==0 & D==0){ 
+
+  digitalWrite(7,1); 
+
+  digitalWrite(8,1); 
+
+  digitalWrite(4,1); 
+
+  digitalWrite(3,1); 
+
+  digitalWrite(2,1); 
+
+  digitalWrite(6,1); 
+
+  digitalWrite(5,1); 
+
+  } 
+
+  else if (A==1 & B==0 & C==0 & D==1){ 
+
+  digitalWrite(7,1); 
+
+  digitalWrite(8,1); 
+
+  digitalWrite(4,1); 
+
+  digitalWrite(3,1); 
+
+  digitalWrite(2,0); 
+
+  digitalWrite(6,1); 
+
+  digitalWrite(5,1); 
+
+  } 
+
+  else if (A==1 & B==0 & C==1 & D==0){ 
+
+  digitalWrite(7,1); 
+
+  digitalWrite(8,1); 
+
+  digitalWrite(4,1); 
+
+  digitalWrite(3,0); 
+
+  digitalWrite(2,1); 
+
+  digitalWrite(6,1); 
+
+  digitalWrite(5,1); 
+
+  } 
+
+  else if (A==1 & B==0 & C==1 & D==1){ 
+
+  digitalWrite(7,0); 
+
+  digitalWrite(8,0); 
+
+  digitalWrite(4,1); 
+
+  digitalWrite(3,1); 
+
+  digitalWrite(2,1); 
+
+  digitalWrite(6,1); 
+
+  digitalWrite(5,1); 
+
+  } 
+
+  else if (A==1 & B==1 & C==0 & D==0){ 
+
+  digitalWrite(7,1); 
+
+  digitalWrite(8,0); 
+
+  digitalWrite(4,0); 
+
+  digitalWrite(3,1); 
+
+  digitalWrite(2,1); 
+
+  digitalWrite(6,1); 
+
+  digitalWrite(5,0); 
+
+  } 
+
+  else if (A==1 & B==1 & C==0 & D==1){ 
+
+  digitalWrite(7,0); 
+
+  digitalWrite(8,1); 
+
+  digitalWrite(4,1); 
+
+  digitalWrite(3,1); 
+
+  digitalWrite(2,1); 
+
+  digitalWrite(6,0); 
+
+  digitalWrite(5,1); 
+
+  } 
+
+  else if (A==1 & B==1 & C==1 & D==0){ 
+
+  digitalWrite(7,1); 
+
+  digitalWrite(8,0); 
+
+  digitalWrite(4,0); 
+
+  digitalWrite(3,1); 
+
+  digitalWrite(2,1); 
+
+  digitalWrite(6,1); 
+
+  digitalWrite(5,1); 
+
+  } 
+
+  else{ 
+
+  digitalWrite(7,1); 
+
+  digitalWrite(8,0); 
+
+  digitalWrite(4,0); 
+
+  digitalWrite(3,0); 
+
+  digitalWrite(2,1); 
+
+  digitalWrite(6,1); 
+
+  digitalWrite(5,1); 
+
+  } 
+
+} 
+
+```
 Este código convierte un número binario de 4 bits en su equivalente hexadecimal y lo muestra en un display de 7 segmentos utilizando Arduino. Primero se declaran cuatro variables llamadas A, B, C y D, las cuales representan los bits de entrada provenientes de un DIP switch, donde A es el bit más significativo y D el menos significativo. En la función setup() se configuran los pines 13, 12, 11 y 10 como entradas, ya que allí se conectan los switches que generan el número binario, y los pines 8, 7, 6, 5, 4, 3 y 2 como salidas, porque controlan cada uno de los segmentos del display de 7 segmentos. Luego, en la función loop(), que se ejecuta continuamente, el Arduino lee el estado de cada uno de los pines de entrada con digitalRead, obteniendo valores de 0 o 1 según la posición de cada switch, lo que forma un número binario entre 0000 y 1111. Después de leer estos valores, el programa utiliza una serie de condiciones if y else if para comparar la combinación de A, B, C y D con todos los posibles casos binarios; cada condición representa un número distinto, por ejemplo 0000 corresponde a 0, 0001 a 1, y así sucesivamente hasta 1111 que corresponde a F en hexadecimal. Cuando se cumple una condición, se ejecutan varias instrucciones digitalWrite que envían señales HIGH o LOW a los pines de salida, encendiendo o apagando los segmentos necesarios del display para formar el número o letra correspondiente. De esta manera, cada combinación binaria activa un patrón específico de segmentos que permite visualizar correctamente los valores del 0 al 9 y de la A a la F. Finalmente, el último else cubre el caso restante, asegurando que siempre se muestre un valor válido. En resumen, el código toma una entrada binaria de 4 bits, la interpreta mediante condiciones lógicas y controla un display de 7 segmentos para mostrar su equivalente en hexadecimal de forma visual.
