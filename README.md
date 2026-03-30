@@ -36,6 +36,9 @@ https://www.tinkercad.com/things/1oe0SCwXXUi-surprising-kasi-jarv/editel?returnT
 * 220 Ω para LEDS
 
 ## BASE:
+![image alt](https://github.com/DavidM2708/DavidM2708-Circuitos_Mesa_Maldonado/blob/b84934bb4530b3115fdf8688b2828024802c4ccb/GIT2.png)
+![image alt](https://github.com/DavidM2708/DavidM2708-Circuitos_Mesa_Maldonado/blob/b84934bb4530b3115fdf8688b2828024802c4ccb/GIT1.png)
+
 
 Los cables rojo y verde se usaron para distribuir la alimentación en la protoboard desde Arduino Uno: el rojo lleva 5V y el verde lleva GND (tierra). El cable rojo conecta el pin de 5 voltios del Arduino con la línea positiva de la protoboard para tener una fuente de energía disponible en el circuito, mientras que el cable verde conecta GND con la línea negativa para establecer el retorno de corriente. Esto permite que todos los componentes tengan acceso ordenado a alimentación y tierra sin tener que llevar cables individuales desde Arduino a cada elemento. En otras palabras, esos dos cables crean la base eléctrica del circuito: 5V como fuente de energía y GND como referencia y retorno.
 
