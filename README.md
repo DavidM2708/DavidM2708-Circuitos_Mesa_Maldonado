@@ -140,7 +140,49 @@ porque verde hace NOT de A.
 https://www.tinkercad.com/things/hk1E3C8UH8m-convertidor-de-binario-a-hexadecimal?sharecode=YU6Csivr-VOBAx-n6FyZRAqWSyzmIFvF69KOStj3eZ0 :
 
 ## COMPONENTES: 
-* El display de 7 segmentos tiene que está en CATODO COMÚN 
+* Protoboard
+* Arduino UNO
+*  Display de 7 segmentos en CATODO COMÚN 
 * El DIP switch  
-* Resistencias de 330 ohmios 
+* Resistencias 7 de 330 Ω y 4 10 KΩ
 
+## BASE
+
+
+Las resistencias conectadas al DIP switch se colocaron hacia GND porque funcionan como resistencias pull-down. Esto significa que aseguran que cuando el interruptor está apagado, el pin lea un valor LOW (0) estable, evitando señales erráticas o “flotantes”. Cuando el switch se activa, el pin recibe 5V y cambia a HIGH. En resumen, estas resistencias garantizan que las entradas sean estables y correctas. 
+Las resistencias conectadas al display se usan para limitar la corriente que pasa por cada segmento. Como cada segmento es un LED, sin estas resistencias podría circular demasiada corriente y dañarlos. Estas resistencias protegen el display y aseguran un brillo adecuado. En resumen, son un elemento de protección esencial del circuito. 
+
+
+El cable rojo se conecta al pin de 5V del Arduino y lleva la alimentación positiva a la protoboard, mientras que el cable negro se conecta a GND y completa el circuito proporcionando la referencia de tierra. Ambos son fundamentales para que todo el sistema funcione correctamente. 
+
+
+Cada switch será un bit: 
+
+Switch 1 → pin 13 (valor 1)  
+Switch 2 → pin 12 (valor 2)  
+Switch 3 → pin 11 (valor 4)  
+Switch 4 → pin 10 (valor 8) 
+
+Los cables Naranjas del DIP switch se conectaron a los pines de entrada del Arduino porque su función es enviar el valor binario al sistema. Cada interruptor representa un bit (1 o 0), y al activarlo o desactivarlo se genera una señal eléctrica que el Arduino puede leer. Estos cables llevan esa información directamente a los pines digitales, permitiendo que el Arduino interprete combinaciones binarias de 4 bits. En resumen, los cables amarillos son los que transportan la información de entrada que luego será convertida a hexadecimal. 
+
+
+Cada segmento (a, b, c, d, e, f, g): 
+
+Se conecta a un pin del Arduino (ejemplo):  
+
+a → 8 
+b → 7 
+c → 4  
+d → 3  
+e → 2  
+f → 6  
+g → 5  
+
+Cada conexión debe llevar resistencia 
+
+
+Los cables morados del display se conectaron a los pines digitales del Arduino Uno porque su función es controlar cada uno de los segmentos del display de 7 segmentos. Cada cable corresponde a un segmento (a, b, c, d, e, f, g), y el Arduino envía señales HIGH o LOW según el número que debe mostrarse. Cuando un pin está en HIGH, el segmento correspondiente se enciende, y cuando está en LOW, se apaga. De esta forma, el Arduino puede formar números del 0 al 9 y letras de la A a la F combinando los segmentos encendidos. En resumen, los cables verdes permiten que el Arduino muestre visualmente el resultado del número binario ingresado. 
+
+
+## EXPLICACIÓN CODIGTO
+Este código convierte un número binario de 4 bits en su equivalente hexadecimal y lo muestra en un display de 7 segmentos utilizando Arduino. Primero se declaran cuatro variables llamadas A, B, C y D, las cuales representan los bits de entrada provenientes de un DIP switch, donde A es el bit más significativo y D el menos significativo. En la función setup() se configuran los pines 13, 12, 11 y 10 como entradas, ya que allí se conectan los switches que generan el número binario, y los pines 8, 7, 6, 5, 4, 3 y 2 como salidas, porque controlan cada uno de los segmentos del display de 7 segmentos. Luego, en la función loop(), que se ejecuta continuamente, el Arduino lee el estado de cada uno de los pines de entrada con digitalRead, obteniendo valores de 0 o 1 según la posición de cada switch, lo que forma un número binario entre 0000 y 1111. Después de leer estos valores, el programa utiliza una serie de condiciones if y else if para comparar la combinación de A, B, C y D con todos los posibles casos binarios; cada condición representa un número distinto, por ejemplo 0000 corresponde a 0, 0001 a 1, y así sucesivamente hasta 1111 que corresponde a F en hexadecimal. Cuando se cumple una condición, se ejecutan varias instrucciones digitalWrite que envían señales HIGH o LOW a los pines de salida, encendiendo o apagando los segmentos necesarios del display para formar el número o letra correspondiente. De esta manera, cada combinación binaria activa un patrón específico de segmentos que permite visualizar correctamente los valores del 0 al 9 y de la A a la F. Finalmente, el último else cubre el caso restante, asegurando que siempre se muestre un valor válido. En resumen, el código toma una entrada binaria de 4 bits, la interpreta mediante condiciones lógicas y controla un display de 7 segmentos para mostrar su equivalente en hexadecimal de forma visual.
