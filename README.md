@@ -640,4 +640,11 @@ El programa hace una secuencia:
 Todo esto se controla con tiempos usando delay().
 
 
+## CONCLUSIÓN
+En conclusión, el desarrollo de los tres circuitos permitió comprender de manera práctica y aplicada los fundamentos de los sistemas digitales utilizando Arduino como herramienta principal. En el primer circuito, correspondiente a las compuertas lógicas, se logró evidenciar cómo a partir de entradas simples, como los botones, es posible implementar operaciones básicas de la lógica booleana como AND, OR y NOT, cuyos resultados se representan mediante LEDs. Esto facilita la comprensión del comportamiento de las variables binarias y cómo estas influyen directamente en las salidas del sistema, además de reforzar conceptos como estados HIGH y LOW.
 
+En el segundo circuito, el conversor de binario a hexadecimal, se profundiza en el manejo de datos digitales, ya que se trabaja con números binarios de 4 bits que son interpretados por el Arduino y transformados en su equivalente hexadecimal. Este proceso se visualiza a través de un display de 7 segmentos, lo que permite observar de forma clara cómo una combinación de bits puede representar diferentes valores numéricos y alfanuméricos. Este circuito no solo refuerza la lógica de programación mediante condiciones, sino también el entendimiento de sistemas numéricos y su aplicación en la electrónica digital.
+
+Por otro lado, el tercer circuito del semáforo vial introduce el concepto de sistemas secuenciales, donde el comportamiento de las salidas no depende únicamente de las entradas, sino también del tiempo. A través del uso de retardos (delay), el Arduino controla el encendido y apagado de los LEDs simulando el funcionamiento real de un semáforo, lo que permite comprender cómo se pueden automatizar procesos cotidianos mediante programación.
+
+En conjunto, estos tres proyectos integran conceptos clave como entradas y salidas digitales, lógica booleana, conversión de sistemas numéricos y control secuencial, demostrando cómo Arduino puede ser utilizado como una herramienta didáctica para el diseño y comprensión de sistemas electrónicos. Además, permiten desarrollar habilidades en montaje de circuitos, interpretación de señales y programación, sentando una base sólida para proyectos más avanzados en el área de la ingeniería de sistemas y la electrónica.
