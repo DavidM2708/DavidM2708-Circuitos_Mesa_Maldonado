@@ -115,4 +115,9 @@ porque verde hace NOT de A.
 * verde = NOT A
 * depende solo de A.
 
-  # 2. COMPUERTAS LOGICAS:
+# 2. SIMULACION DE CONVERSOR BINARIO A HEXADECIMAL: 
+
+https://www.tinkercad.com/things/hk1E3C8UH8m-convertidor-de-binario-a-hexadecimal?sharecode=YU6Csivr-VOBAx-n6FyZRAqWSyzmIFvF69KOStj3eZ0 :
+
+##COMPONENTES
+
