@@ -1,3 +1,4 @@
+![image alt](https://github.com/DavidM2708/DavidM2708-Circuitos_Mesa_Maldonado/blob/445aa7ad51c4a87ae4bed16605c140ddb8756f26/COMPENSAR.png)
 # TALLER CIRCUITOS INTEGRADOS ARDUINO
 
 ## Integrantes:
